@@ -31,21 +31,20 @@ html(lang="en")
     meta(name="twitter:site", content="@logansmcansh")
     meta(name="twitter:creator", content="@logansmcansh")
     meta(name="twitter:title", content="__FILENAME__")
-    meta(name="twitter:description", content="Logan McAnsh shared __FILENAME__")
+    meta(name="twitter:description", content="Logan McAnsh shared __FILENAME__ on __SHAREDATE__")
     meta(name="twitter:image", content="__PREVIEWURL__")
-    link(rel="stylesheet", href="https://lgnmcnsh.me/assets/css/dropshare.css")
     link(rel="apple-touch-icon" href="https://lgnmcnsh.me/assets/img/apple-touch-icon.png")
-    link(rel="shortcut icon" href="https://lgnmcnsh.me/assets/img/favicon.ico")
-
+    link(rel="shortcut icon" href="https://loganmcansh.com/favicon.ico")
+    //- link(rel='stylesheet', href='/assets/css/dropshare.css')
+    
+    style
+      include assets/css/dropshare.css
 
   body
     nav
-      .left
-        p __FILENAME__
-      .right
-        p __SHAREDATE__
-    
+      p __FILENAME__ shared by Logan McAnsh at __SHAREDATE__
     main
-      | __PREVIEW__
-      a.btn(href="__PATH__") Download __FILENAME__
-      span __FILESIZE__
+      .imagePreview
+        img.img-thumbnail(src="__PREVIEWURL__", alt="__FILENAME__")
+        //- img.img-thumbnail(src="https://lgnmcnsh.me/files/pb-9U3OtOQWPP/pb-9U3OtOQWPP.png", alt="Preview")
+      a.btn(href="__PATH__" download="__FILENAME__") __FILENAME__ is __FILESIZE__
